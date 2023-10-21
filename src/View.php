@@ -7,16 +7,6 @@ function showGame()
     echo 'Игра "Горячо-Холодно" началась.' . PHP_EOL;
 }
 
-function showList()
-{
-    echo "Список игр из БД SQLite3\n";
-}
-
-function showReplay()
-{
-    echo "Повстор игры с заданым id\n";
-}
-
 function help()
 {
     echo '+----------------------------------------------------------------+

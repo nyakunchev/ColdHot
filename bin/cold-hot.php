@@ -13,8 +13,8 @@ use function nyakunchev\cold_hot\Controller\key;
 
 if (isset($argv[1])) {
     $key = $argv[1];
-    key($key);
+    key($key, $argv[2]);
 } else {
     $key = "-n";
-    key($key);
+    key($key, $argv[2]);
 }
