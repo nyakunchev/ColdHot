@@ -12,9 +12,11 @@ if (file_exists($vendorGit)) {
 use function nyakunchev\cold_hot\Controller\key;
 
 if (isset($argv[1])) {
-    $key = $argv[1];
-    key($key, $argv[2]);
+    if ($argv[1] === "-r" || $argv[1] === "--replay") {
+        key($argv[1], $argv[2]);
+    } else {
+        key($argv[1], null);
+    }
 } else {
-    $key = "-n";
-    key($key, $argv[2]);
+    key("-n", null);
 }
